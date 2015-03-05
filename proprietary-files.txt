@@ -22,7 +22,7 @@ lib/libgps.utils.so
 # CM-11.0 #
 
 # bin
-#bin/rild
+bin/rild
 bin/btnvtool
 bin/wcnss_service
 bin/diag_callback_client
@@ -151,7 +151,7 @@ etc/cacert_location.pem
 etc/bcompat.manifest
 etc/audio_effects.conf
 etc/audio_policy.conf
-etc/apns-conf.xml
+#etc/apns-conf.xml
 etc/ad_calib.cfg
 etc/ReceiverFilterPolicy.xml
 etc/wifi/wpa_supplicant_overlay.conf
