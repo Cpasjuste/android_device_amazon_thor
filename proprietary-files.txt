@@ -1,6 +1,6 @@
 # amazon update 4.5.2
 # lib/libutils.so > export needed from audio_policy.msm8974.so
-lib/libutils.so
+# lib/libutils.so
 #lib/libOmxAacEnc.so
 #lib/libOmxCore.so
 #lib/libOmxQcelp13Enc.so
@@ -149,7 +149,7 @@ etc/carrier.xml
 etc/capability.xml
 etc/cacert_location.pem
 etc/bcompat.manifest
-etc/audio_effects.conf
+#etc/audio_effects.conf
 etc/audio_policy.conf
 #etc/apns-conf.xml
 etc/ad_calib.cfg
@@ -212,8 +212,8 @@ usr/idc/amazon_touch.idc
 lib/libril-lab126qmi.so
 lib/libaudioroute.so
 lib/libsmartvolume.so
-lib/hw/audio.primary.msm8974.so
-lib/hw/audio_policy.msm8974.so
+#lib/hw/audio.primary.msm8974.so
+#lib/hw/audio_policy.msm8974.so
 lib/hw/keystore.amzn.qcom.so
 lib/hw/camera.msm8974.so
 
@@ -487,7 +487,7 @@ vendor/lib/libqmi_client_qmux.so
 vendor/lib/libualutil.so
 vendor/lib/libsc-a2xx.so
 vendor/lib/libwfdmmsink.so
-vendor/lib/hw/power.qcom.so
+#vendor/lib/hw/power.qcom.so
 vendor/lib/hw/sensors.msm8974.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libchromatix_s5k3l1yx_common.so
@@ -522,7 +522,7 @@ vendor/lib/libOmxMux.so
 vendor/lib/libscve_stub.so
 vendor/lib/libtzplayready.so
 vendor/lib/libI420colorconvert.so
-vendor/etc/audio_effects.conf
+#vendor/etc/audio_effects.conf
 
 # firmwares
 etc/firmware/a225_pfp.fw

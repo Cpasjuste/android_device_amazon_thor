@@ -5,4 +5,5 @@ symlink("/system/etc/firmware/ath6k/AR6004/hw1.3/bdata.bin_usb", "/system/etc/fi
 symlink("/system/etc/firmware/ath6k/AR6004/hw1.3/fw.ram.bin_usb", "/system/etc/firmware/ath6k/AR6004/hw1.3/fw.ram.bin");
 symlink("/system/etc/firmware/ath6k/AR6004/hw3.0/boardData_Thor_FCC.bin", "/system/etc/firmware/ath6k/AR6004/hw3.0/bdata.bin");
 symlink("/system/lib/modules/ath6kl-3.5/ath6kl_usb.ko", "/system/lib/modules/wlan.ko");
+symlink("/system/vendor/lib/hw/power.msm8974.so", "/system/vendor/lib/hw/power.qcom.so" );
 
