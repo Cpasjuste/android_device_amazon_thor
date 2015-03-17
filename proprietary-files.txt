@@ -1,25 +1,35 @@
-# amazon update 4.5.2
-# lib/libutils.so > export needed from audio_policy.msm8974.so
-# lib/libutils.so
-#lib/libOmxAacEnc.so
-#lib/libOmxCore.so
-#lib/libOmxQcelp13Enc.so
-#lib/libOmxVdec.so
-#lib/libOmxAmrEnc.so
-#lib/libOmxEvrcEnc.so
-#lib/libOmxVdecHevc.so
-#lib/libOmxVenc.so
-
 # CM-11.0 #
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libqomx_core.so
+# CM-11.0 #
+
+# GPS - https://github.com/CyanogenMod/android_device_sony_huashan/
+bin/gpsone_daemon
+bin/location-mq
+bin/lowi-server
+bin/quipc_igsn
+bin/quipc_main
+bin/xtwifi-client
+bin/xtwifi-inet-agent
+lib/hw/gps.default.so
+lib/libgps.utils.so
 lib/libloc_api_v02.so
 lib/libloc_core.so
 lib/libloc_ds_api.so
 lib/libloc_eng.so
-lib/libgps.utils.so
-# CM-11.0 #
+vendor/lib/libloc_xtra.so
+vendor/lib/libgeofence.so
+vendor/lib/libizat_core.so
+vendor/lib/liblbs_core.so
+vendor/lib/libloc_ext.so
+vendor/lib/liblocationservice.so
+vendor/lib/liblowi_client.so
+vendor/lib/libquipc_os_api.so
+vendor/lib/libquipc_ulp_adapter.so
+vendor/lib/libulp2.so
+vendor/lib/libxt_native.so
+# GPS
 
 # bin
 bin/rild
@@ -39,7 +49,6 @@ bin/xtwifi-inet-agent
 bin/location-mq
 bin/quipc_igsn
 bin/quipc_main
-bin/gpsone_daemon
 bin/qmiproxy
 bin/imsqmidaemon
 bin/ftmdaemon
@@ -68,13 +77,8 @@ bin/ds_fmc_appd
 bin/irsc_util
 bin/mm-camera-cmd-tool
 bin/mm-qcamera-daemon
-#bin/mm-venc-omx-test720p
 bin/mm-pp-daemon
-#bin/mm-vdec-omx-test
-#bin/mm-video-driver-test
 bin/mm-qcamera-app
-#bin/mm-venc-omx-test
-#bin/mm-video-encdrv-test
 bin/mpdecision
 bin/netmgrd
 bin/nl_listener
@@ -99,7 +103,6 @@ etc/bluetooth/auto_pair_devlist.conf
 etc/bluetooth/bt_stack.conf
 etc/bluetooth/bt_did.conf
 etc/bluetooth/bt_stack_rel.conf
-#etc/clatd.conf
 etc/xtwifi.conf
 etc/xtra_root_cert.pem
 etc/wfdconfigsink.xml
@@ -117,10 +120,6 @@ etc/qosmgr_rules.xml
 etc/qca6234-service.sh
 etc/msap.conf
 etc/monitoring.conf
-etc/mixer_paths_auxpcm.xml
-etc/mixer_paths.xml
-etc/media_profiles.xml
-etc/media_codecs.xml
 etc/lowi.conf
 etc/kft_blacklist.conf
 etc/izat.conf
@@ -139,7 +138,6 @@ etc/init.ath3k.bt.sh
 etc/hsic.control.bt.sh
 etc/hcidump.sh
 etc/gps.conf
-#etc/ftm_test_config
 etc/flp.conf
 etc/fdrw_default.conf
 etc/ds-default.xml
@@ -149,9 +147,6 @@ etc/carrier.xml
 etc/capability.xml
 etc/cacert_location.pem
 etc/bcompat.manifest
-#etc/audio_effects.conf
-etc/audio_policy.conf
-#etc/apns-conf.xml
 etc/ad_calib.cfg
 etc/ReceiverFilterPolicy.xml
 etc/wifi/wpa_supplicant_overlay.conf
@@ -210,10 +205,7 @@ usr/idc/amazon_touch.idc
 
 # libs
 lib/libril-lab126qmi.so
-lib/libaudioroute.so
 lib/libsmartvolume.so
-#lib/hw/audio.primary.msm8974.so
-#lib/hw/audio_policy.msm8974.so
 lib/hw/keystore.amzn.qcom.so
 lib/hw/camera.msm8974.so
 
@@ -223,7 +215,7 @@ lib/libgps.utils.so
 lib/libgpu.cr.so
 
 # vendor
-#vendor/lib/libbt-vendor.so
+vendor/lib/libbt-vendor.so
 vendor/lib/libbtnv.so
 -vendor/lib/libtime_genoff.so
 vendor/smartvolume/bt_a2dp_headphones.csv
@@ -280,7 +272,6 @@ vendor/lib/libqcci_legacy.so
 vendor/lib/libmmwfdsinkinterface.so
 vendor/lib/libssd.so
 vendor/lib/libmmqjpeg_codec.so
-vendor/lib/liblowi_client.so
 vendor/lib/libchromatix_imx135_hfr_120.so
 vendor/lib/libwfdsm.so
 vendor/lib/lib-imsxml.so
@@ -296,7 +287,6 @@ vendor/lib/libc2d2_z180.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libExtendedExtractor.so
 vendor/lib/libmmcamera_ov8825.so
-vendor/lib/libquipc_ulp_adapter.so
 vendor/lib/libmm-abl.so
 vendor/lib/libdsnetutils.so
 vendor/lib/libwvdrm_L3.so
@@ -328,7 +318,6 @@ vendor/lib/libjpegdhw.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libwfdmmutils.so
 vendor/lib/libchromatix_skuab_shinetech_gc0339_common.so
-vendor/lib/libloc_ext.so
 vendor/lib/libmmiipstreammmihttp.so
 vendor/lib/libmmcamera2_iface_modules.so
 vendor/lib/libc2d30-a4xx.so
@@ -342,7 +331,6 @@ vendor/lib/libusndroute.so
 vendor/lib/lib-imsqimf.so
 vendor/lib/libmmosal.so
 vendor/lib/libmmcamera_mt9m114.so
-vendor/lib/liblocationservice.so
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
@@ -350,7 +338,6 @@ vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/libprofiler_msmadc.so
 vendor/lib/libwvm.so
-vendor/lib/libulp2.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/lib-imss.so
 vendor/lib/libchromatix_ov2720_zsl.so
@@ -387,7 +374,6 @@ vendor/lib/libsecureui.so
 vendor/lib/lib-imsdpl.so
 vendor/lib/libchromatix_ov8835_hfr_60fps.so
 vendor/lib/libbltsville_gc2d.2.2.2.0.so
-vendor/lib/libquipc_os_api.so
 vendor/lib/libmmcamera_s5k3l1yx.so
 vendor/lib/libchromatix_ov9724_default_video.so
 vendor/lib/libwfduibcsrc.so
@@ -400,7 +386,6 @@ vendor/lib/libwfdnative.so
 vendor/lib/libchromatix_imx135_snapshot.so
 vendor/lib/libscale.so
 vendor/lib/libtzdrmgenprov.so
-vendor/lib/libloc_xtra.so
 vendor/lib/lib-imsvt.so
 vendor/lib/libchromatix_ov2720_hfr.so
 vendor/lib/libcneapiclient.so
@@ -463,7 +448,6 @@ vendor/lib/libdsucsd.so
 vendor/lib/libchromatix_ov9724_common.so
 vendor/lib/libmmwfdinterface.so
 vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libxt_native.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/lib-rtpcommon.so
@@ -472,8 +456,6 @@ vendor/lib/libc2d30.so
 vendor/lib/libwfduibcsink.so
 vendor/lib/libmmcamera_cac_lib.so
 vendor/lib/libchromatix_ov8825_preview.so
-vendor/lib/liblbs_core.so
-vendor/lib/libgeofence.so
 vendor/lib/lib-rcsimssjni.so
 vendor/lib/libOpenVG.so
 vendor/lib/libchromatix_ov9726_default_video.so
@@ -494,7 +476,6 @@ vendor/lib/libchromatix_s5k3l1yx_common.so
 vendor/lib/soundfx/libhwdap.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/libmmipstreamnetwork.so
-vendor/lib/libizat_core.so
 vendor/lib/libprdrmdecrypt.so
 vendor/lib/libmmipstreamutils.so
 vendor/lib/libwfduibcsrcinterface.so
@@ -522,7 +503,6 @@ vendor/lib/libOmxMux.so
 vendor/lib/libscve_stub.so
 vendor/lib/libtzplayready.so
 vendor/lib/libI420colorconvert.so
-#vendor/etc/audio_effects.conf
 
 # firmwares
 etc/firmware/a225_pfp.fw
